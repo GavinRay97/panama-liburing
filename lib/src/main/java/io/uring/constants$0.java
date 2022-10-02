@@ -9,50 +9,49 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$0 {
 
-    static final FunctionDescriptor io_uring_get_probe_ring$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor atomic_thread_fence$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle atomic_thread_fence$MH = RuntimeHelper.downcallHandle(
+        "atomic_thread_fence",
+        constants$0.atomic_thread_fence$FUNC
+    );
+    static final FunctionDescriptor atomic_signal_fence$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle atomic_signal_fence$MH = RuntimeHelper.downcallHandle(
+        "atomic_signal_fence",
+        constants$0.atomic_signal_fence$FUNC
+    );
+    static final FunctionDescriptor atomic_flag_test_and_set$FUNC = FunctionDescriptor.of(Constants$root.C_BOOL$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_get_probe_ring$MH = RuntimeHelper.downcallHandle(
-        "io_uring_get_probe_ring",
-        constants$0.io_uring_get_probe_ring$FUNC
+    static final MethodHandle atomic_flag_test_and_set$MH = RuntimeHelper.downcallHandle(
+        "atomic_flag_test_and_set",
+        constants$0.atomic_flag_test_and_set$FUNC
     );
-    static final FunctionDescriptor io_uring_get_probe$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
-    static final MethodHandle io_uring_get_probe$MH = RuntimeHelper.downcallHandle(
-        "io_uring_get_probe",
-        constants$0.io_uring_get_probe$FUNC
-    );
-    static final FunctionDescriptor io_uring_free_probe$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_free_probe$MH = RuntimeHelper.downcallHandle(
-        "io_uring_free_probe",
-        constants$0.io_uring_free_probe$FUNC
-    );
-    static final FunctionDescriptor io_uring_opcode_supported$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor atomic_flag_test_and_set_explicit$FUNC = FunctionDescriptor.of(Constants$root.C_BOOL$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_opcode_supported$MH = RuntimeHelper.downcallHandle(
-        "io_uring_opcode_supported",
-        constants$0.io_uring_opcode_supported$FUNC
+    static final MethodHandle atomic_flag_test_and_set_explicit$MH = RuntimeHelper.downcallHandle(
+        "atomic_flag_test_and_set_explicit",
+        constants$0.atomic_flag_test_and_set_explicit$FUNC
     );
-    static final FunctionDescriptor io_uring_queue_init_params$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor atomic_flag_clear$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_queue_init_params$MH = RuntimeHelper.downcallHandle(
-        "io_uring_queue_init_params",
-        constants$0.io_uring_queue_init_params$FUNC
+    static final MethodHandle atomic_flag_clear$MH = RuntimeHelper.downcallHandle(
+        "atomic_flag_clear",
+        constants$0.atomic_flag_clear$FUNC
     );
-    static final FunctionDescriptor io_uring_queue_init$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor atomic_flag_clear_explicit$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_queue_init$MH = RuntimeHelper.downcallHandle(
-        "io_uring_queue_init",
-        constants$0.io_uring_queue_init$FUNC
+    static final MethodHandle atomic_flag_clear_explicit$MH = RuntimeHelper.downcallHandle(
+        "atomic_flag_clear_explicit",
+        constants$0.atomic_flag_clear_explicit$FUNC
     );
 }
 

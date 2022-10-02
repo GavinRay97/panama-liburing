@@ -9,69 +9,47 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$22 {
 
-    static final FunctionDescriptor io_uring_prep_fgetxattr$FUNC = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor pipe2$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
+        Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_fgetxattr$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_fgetxattr",
-        constants$22.io_uring_prep_fgetxattr$FUNC
+    static final MethodHandle pipe2$MH = RuntimeHelper.downcallHandle(
+        "pipe2",
+        constants$22.pipe2$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_fsetxattr$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
+    static final FunctionDescriptor alarm$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_fsetxattr$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_fsetxattr",
-        constants$22.io_uring_prep_fsetxattr$FUNC
+    static final MethodHandle alarm$MH = RuntimeHelper.downcallHandle(
+        "alarm",
+        constants$22.alarm$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_socket$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor sleep$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle sleep$MH = RuntimeHelper.downcallHandle(
+        "sleep",
+        constants$22.sleep$FUNC
+    );
+    static final FunctionDescriptor ualarm$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_socket$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_socket",
-        constants$22.io_uring_prep_socket$FUNC
+    static final MethodHandle ualarm$MH = RuntimeHelper.downcallHandle(
+        "ualarm",
+        constants$22.ualarm$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_socket_direct$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor usleep$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_socket_direct$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_socket_direct",
-        constants$22.io_uring_prep_socket_direct$FUNC
+    static final MethodHandle usleep$MH = RuntimeHelper.downcallHandle(
+        "usleep",
+        constants$22.usleep$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_socket_direct_alloc$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_socket_direct_alloc$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_socket_direct_alloc",
-        constants$22.io_uring_prep_socket_direct_alloc$FUNC
-    );
-    static final FunctionDescriptor io_uring_sq_ready$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_sq_ready$MH = RuntimeHelper.downcallHandle(
-        "io_uring_sq_ready",
-        constants$22.io_uring_sq_ready$FUNC
+    static final FunctionDescriptor pause$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
+    static final MethodHandle pause$MH = RuntimeHelper.downcallHandle(
+        "pause",
+        constants$22.pause$FUNC
     );
 }
 

@@ -21,24 +21,43 @@ dependencies {
 
 }
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(19))
-    }
-}
 
 tasks.withType<Test>().configureEach {
     jvmArgs("--enable-preview")
     jvmArgs("--enable-native-access=ALL-UNNAMED")
+    jvmArgs("--add-exports=java.base/jdk.internal.access=ALL-UNNAMED")
+    jvmArgs("--add-exports=java.base/sun.nio.ch=ALL-UNNAMED")
+    jvmArgs("--add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED")
+    jvmArgs("--add-opens=java.base/java.io=ALL-UNNAMED")
+    jvmArgs("--add-opens=java.base/java.lang.reflect=ALL-UNNAMED")
+    jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
+    jvmArgs("--add-opens=java.base/java.nio=ALL-UNNAMED")
+    // jvmArgs("-Xlog:library=info")
 }
 
 tasks.withType<JavaCompile>().configureEach {
     options.compilerArgs.add("--enable-preview")
+    options.compilerArgs.add("--add-exports=java.base/jdk.internal.access=ALL-UNNAMED")
+    options.compilerArgs.add("--add-exports=java.base/jdk.internal.access=ALL-UNNAMED")
+    options.compilerArgs.add("--add-exports=java.base/sun.nio.ch=ALL-UNNAMED")
+    options.compilerArgs.add("--add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED")
+    options.compilerArgs.add("--add-opens=java.base/java.io=ALL-UNNAMED")
+    options.compilerArgs.add("--add-opens=java.base/java.lang.reflect=ALL-UNNAMED")
+    options.compilerArgs.add("--add-opens=java.base/java.lang=ALL-UNNAMED")
+    options.compilerArgs.add("--add-opens=java.base/java.nio=ALL-UNNAMED")
 }
 
 tasks.withType<JavaExec>().configureEach {
     jvmArgs("--enable-preview")
     jvmArgs("--enable-native-access=ALL-UNNAMED")
+    jvmArgs("--add-exports=java.base/jdk.internal.access=ALL-UNNAMED")
+    jvmArgs("--add-exports=java.base/sun.nio.ch=ALL-UNNAMED")
+    jvmArgs("--add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED")
+    jvmArgs("--add-opens=java.base/java.io=ALL-UNNAMED")
+    jvmArgs("--add-opens=java.base/java.lang.reflect=ALL-UNNAMED")
+    jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
+    jvmArgs("--add-opens=java.base/java.nio=ALL-UNNAMED")
+    // jvmArgs("-Xlog:library=info")
     javaLauncher.set(project.javaToolchains.launcherFor(java.toolchain))
 }
 

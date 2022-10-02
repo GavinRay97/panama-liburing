@@ -9,60 +9,58 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$18 {
 
-    static final FunctionDescriptor io_uring_recvmsg_cmsg_firsthdr$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_recvmsg_cmsg_firsthdr$MH = RuntimeHelper.downcallHandle(
-        "io_uring_recvmsg_cmsg_firsthdr",
-        constants$18.io_uring_recvmsg_cmsg_firsthdr$FUNC
-    );
-    static final FunctionDescriptor io_uring_recvmsg_cmsg_nexthdr$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_recvmsg_cmsg_nexthdr$MH = RuntimeHelper.downcallHandle(
-        "io_uring_recvmsg_cmsg_nexthdr",
-        constants$18.io_uring_recvmsg_cmsg_nexthdr$FUNC
-    );
-    static final FunctionDescriptor io_uring_recvmsg_payload$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_recvmsg_payload$MH = RuntimeHelper.downcallHandle(
-        "io_uring_recvmsg_payload",
-        constants$18.io_uring_recvmsg_payload$FUNC
-    );
-    static final FunctionDescriptor io_uring_recvmsg_payload_length$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_recvmsg_payload_length$MH = RuntimeHelper.downcallHandle(
-        "io_uring_recvmsg_payload_length",
-        constants$18.io_uring_recvmsg_payload_length$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_openat2$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor sigaction$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_prep_openat2$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_openat2",
-        constants$18.io_uring_prep_openat2$FUNC
+    static final MethodHandle sigaction$MH = RuntimeHelper.downcallHandle(
+        "sigaction",
+        constants$18.sigaction$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_openat2_direct$FUNC = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor sigpending$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sigpending$MH = RuntimeHelper.downcallHandle(
+        "sigpending",
+        constants$18.sigpending$FUNC
+    );
+    static final FunctionDescriptor sigwait$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sigwait$MH = RuntimeHelper.downcallHandle(
+        "sigwait",
+        constants$18.sigwait$FUNC
+    );
+    static final FunctionDescriptor sigwaitinfo$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sigwaitinfo$MH = RuntimeHelper.downcallHandle(
+        "sigwaitinfo",
+        constants$18.sigwaitinfo$FUNC
+    );
+    static final FunctionDescriptor sigtimedwait$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sigtimedwait$MH = RuntimeHelper.downcallHandle(
+        "sigtimedwait",
+        constants$18.sigtimedwait$FUNC
+    );
+    static final FunctionDescriptor sigqueue$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
+        Constants$root.C_INT$LAYOUT,
+        MemoryLayout.unionLayout(
+            Constants$root.C_INT$LAYOUT.withName("sival_int"),
+            Constants$root.C_POINTER$LAYOUT.withName("sival_ptr")
+        ).withName("sigval")
     );
-    static final MethodHandle io_uring_prep_openat2_direct$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_openat2_direct",
-        constants$18.io_uring_prep_openat2_direct$FUNC
+    static final MethodHandle sigqueue$MH = RuntimeHelper.downcallHandle(
+        "sigqueue",
+        constants$18.sigqueue$FUNC
     );
 }
 

@@ -9,54 +9,57 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$4 {
 
-    static final FunctionDescriptor io_uring_unregister_files$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_unregister_files$MH = RuntimeHelper.downcallHandle(
-        "io_uring_unregister_files",
-        constants$4.io_uring_unregister_files$FUNC
-    );
-    static final FunctionDescriptor io_uring_register_files_update$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor openat$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_register_files_update$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_files_update",
-        constants$4.io_uring_register_files_update$FUNC
+    static final MethodHandle openat$MH = RuntimeHelper.downcallHandleVariadic(
+        "openat",
+        constants$4.openat$FUNC
     );
-    static final FunctionDescriptor io_uring_register_eventfd$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor openat64$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_register_eventfd$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_eventfd",
-        constants$4.io_uring_register_eventfd$FUNC
+    static final MethodHandle openat64$MH = RuntimeHelper.downcallHandleVariadic(
+        "openat64",
+        constants$4.openat64$FUNC
     );
-    static final FunctionDescriptor io_uring_register_eventfd_async$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor creat$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_register_eventfd_async$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_eventfd_async",
-        constants$4.io_uring_register_eventfd_async$FUNC
+    static final MethodHandle creat$MH = RuntimeHelper.downcallHandle(
+        "creat",
+        constants$4.creat$FUNC
     );
-    static final FunctionDescriptor io_uring_unregister_eventfd$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_unregister_eventfd$MH = RuntimeHelper.downcallHandle(
-        "io_uring_unregister_eventfd",
-        constants$4.io_uring_unregister_eventfd$FUNC
-    );
-    static final FunctionDescriptor io_uring_register_probe$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor creat64$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_register_probe$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_probe",
-        constants$4.io_uring_register_probe$FUNC
+    static final MethodHandle creat64$MH = RuntimeHelper.downcallHandle(
+        "creat64",
+        constants$4.creat64$FUNC
+    );
+    static final FunctionDescriptor lockf$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle lockf$MH = RuntimeHelper.downcallHandle(
+        "lockf",
+        constants$4.lockf$FUNC
+    );
+    static final FunctionDescriptor lockf64$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle lockf64$MH = RuntimeHelper.downcallHandle(
+        "lockf64",
+        constants$4.lockf64$FUNC
     );
 }
 

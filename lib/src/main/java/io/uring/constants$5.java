@@ -9,52 +9,61 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$5 {
 
-    static final FunctionDescriptor io_uring_register_personality$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_register_personality$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_personality",
-        constants$5.io_uring_register_personality$FUNC
-    );
-    static final FunctionDescriptor io_uring_unregister_personality$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_unregister_personality$MH = RuntimeHelper.downcallHandle(
-        "io_uring_unregister_personality",
-        constants$5.io_uring_unregister_personality$FUNC
-    );
-    static final FunctionDescriptor io_uring_register_restrictions$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_register_restrictions$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_restrictions",
-        constants$5.io_uring_register_restrictions$FUNC
-    );
-    static final FunctionDescriptor io_uring_enable_rings$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_enable_rings$MH = RuntimeHelper.downcallHandle(
-        "io_uring_enable_rings",
-        constants$5.io_uring_enable_rings$FUNC
-    );
-    static final FunctionDescriptor __io_uring_sqring_wait$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle __io_uring_sqring_wait$MH = RuntimeHelper.downcallHandle(
-        "__io_uring_sqring_wait",
-        constants$5.__io_uring_sqring_wait$FUNC
-    );
-    static final FunctionDescriptor io_uring_register_iowq_aff$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor posix_fadvise$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_register_iowq_aff$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_iowq_aff",
-        constants$5.io_uring_register_iowq_aff$FUNC
+    static final MethodHandle posix_fadvise$MH = RuntimeHelper.downcallHandle(
+        "posix_fadvise",
+        constants$5.posix_fadvise$FUNC
+    );
+    static final FunctionDescriptor posix_fadvise64$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle posix_fadvise64$MH = RuntimeHelper.downcallHandle(
+        "posix_fadvise64",
+        constants$5.posix_fadvise64$FUNC
+    );
+    static final FunctionDescriptor posix_fallocate$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle posix_fallocate$MH = RuntimeHelper.downcallHandle(
+        "posix_fallocate",
+        constants$5.posix_fallocate$FUNC
+    );
+    static final FunctionDescriptor posix_fallocate64$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle posix_fallocate64$MH = RuntimeHelper.downcallHandle(
+        "posix_fallocate64",
+        constants$5.posix_fallocate64$FUNC
+    );
+    static final FunctionDescriptor imaxabs$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle imaxabs$MH = RuntimeHelper.downcallHandle(
+        "imaxabs",
+        constants$5.imaxabs$FUNC
+    );
+    static final FunctionDescriptor imaxdiv$FUNC = FunctionDescriptor.of(MemoryLayout.structLayout(
+        Constants$root.C_LONG_LONG$LAYOUT.withName("quot"),
+        Constants$root.C_LONG_LONG$LAYOUT.withName("rem")
+    ),
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle imaxdiv$MH = RuntimeHelper.downcallHandle(
+        "imaxdiv",
+        constants$5.imaxdiv$FUNC
     );
 }
 

@@ -9,64 +9,54 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$17 {
 
-    static final FunctionDescriptor io_uring_prep_send_zc$FUNC = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor sigismember$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_send_zc$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_send_zc",
-        constants$17.io_uring_prep_send_zc$FUNC
+    static final MethodHandle sigismember$MH = RuntimeHelper.downcallHandle(
+        "sigismember",
+        constants$17.sigismember$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_send_set_addr$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_SHORT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_send_set_addr$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_send_set_addr",
-        constants$17.io_uring_prep_send_set_addr$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_recv$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_recv$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_recv",
-        constants$17.io_uring_prep_recv$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_recv_multishot$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_recv_multishot$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_recv_multishot",
-        constants$17.io_uring_prep_recv_multishot$FUNC
-    );
-    static final FunctionDescriptor io_uring_recvmsg_validate$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor sigisemptyset$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_recvmsg_validate$MH = RuntimeHelper.downcallHandle(
-        "io_uring_recvmsg_validate",
-        constants$17.io_uring_recvmsg_validate$FUNC
+    static final MethodHandle sigisemptyset$MH = RuntimeHelper.downcallHandle(
+        "sigisemptyset",
+        constants$17.sigisemptyset$FUNC
     );
-    static final FunctionDescriptor io_uring_recvmsg_name$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor sigandset$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_recvmsg_name$MH = RuntimeHelper.downcallHandle(
-        "io_uring_recvmsg_name",
-        constants$17.io_uring_recvmsg_name$FUNC
+    static final MethodHandle sigandset$MH = RuntimeHelper.downcallHandle(
+        "sigandset",
+        constants$17.sigandset$FUNC
+    );
+    static final FunctionDescriptor sigorset$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sigorset$MH = RuntimeHelper.downcallHandle(
+        "sigorset",
+        constants$17.sigorset$FUNC
+    );
+    static final FunctionDescriptor sigprocmask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sigprocmask$MH = RuntimeHelper.downcallHandle(
+        "sigprocmask",
+        constants$17.sigprocmask$FUNC
+    );
+    static final FunctionDescriptor sigsuspend$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sigsuspend$MH = RuntimeHelper.downcallHandle(
+        "sigsuspend",
+        constants$17.sigsuspend$FUNC
     );
 }
 

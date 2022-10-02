@@ -9,57 +9,31 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$1 {
 
-    static final FunctionDescriptor io_uring_queue_mmap$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_queue_mmap$MH = RuntimeHelper.downcallHandle(
-        "io_uring_queue_mmap",
-        constants$1.io_uring_queue_mmap$FUNC
-    );
-    static final FunctionDescriptor io_uring_ring_dontfork$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_ring_dontfork$MH = RuntimeHelper.downcallHandle(
-        "io_uring_ring_dontfork",
-        constants$1.io_uring_ring_dontfork$FUNC
-    );
-    static final FunctionDescriptor io_uring_queue_exit$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_queue_exit$MH = RuntimeHelper.downcallHandle(
-        "io_uring_queue_exit",
-        constants$1.io_uring_queue_exit$FUNC
-    );
-    static final FunctionDescriptor io_uring_peek_batch_cqe$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor __kernel_sighandler_t$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_peek_batch_cqe$MH = RuntimeHelper.downcallHandle(
-        "io_uring_peek_batch_cqe",
-        constants$1.io_uring_peek_batch_cqe$FUNC
+    static final MethodHandle __kernel_sighandler_t$MH = RuntimeHelper.downcallHandle(
+        constants$1.__kernel_sighandler_t$FUNC
     );
-    static final FunctionDescriptor io_uring_wait_cqes$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor __errno_location$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle __errno_location$MH = RuntimeHelper.downcallHandle(
+        "__errno_location",
+        constants$1.__errno_location$FUNC
+    );
+    static final  OfAddress program_invocation_name$LAYOUT = Constants$root.C_POINTER$LAYOUT;
+    static final VarHandle program_invocation_name$VH = constants$1.program_invocation_name$LAYOUT.varHandle();
+    static final MemorySegment program_invocation_name$SEGMENT = RuntimeHelper.lookupGlobalVariable("program_invocation_name", constants$1.program_invocation_name$LAYOUT);
+    static final  OfAddress program_invocation_short_name$LAYOUT = Constants$root.C_POINTER$LAYOUT;
+    static final VarHandle program_invocation_short_name$VH = constants$1.program_invocation_short_name$LAYOUT.varHandle();
+    static final MemorySegment program_invocation_short_name$SEGMENT = RuntimeHelper.lookupGlobalVariable("program_invocation_short_name", constants$1.program_invocation_short_name$LAYOUT);
+    static final FunctionDescriptor readahead$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
     );
-    static final MethodHandle io_uring_wait_cqes$MH = RuntimeHelper.downcallHandle(
-        "io_uring_wait_cqes",
-        constants$1.io_uring_wait_cqes$FUNC
-    );
-    static final FunctionDescriptor io_uring_wait_cqe_timeout$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_wait_cqe_timeout$MH = RuntimeHelper.downcallHandle(
-        "io_uring_wait_cqe_timeout",
-        constants$1.io_uring_wait_cqe_timeout$FUNC
+    static final MethodHandle readahead$MH = RuntimeHelper.downcallHandle(
+        "readahead",
+        constants$1.readahead$FUNC
     );
 }
 

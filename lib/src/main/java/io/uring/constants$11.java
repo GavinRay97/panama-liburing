@@ -9,66 +9,51 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$11 {
 
-    static final FunctionDescriptor io_uring_prep_writev2$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor __sched_cpualloc$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle __sched_cpualloc$MH = RuntimeHelper.downcallHandle(
+        "__sched_cpualloc",
+        constants$11.__sched_cpualloc$FUNC
+    );
+    static final FunctionDescriptor __sched_cpufree$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle __sched_cpufree$MH = RuntimeHelper.downcallHandle(
+        "__sched_cpufree",
+        constants$11.__sched_cpufree$FUNC
+    );
+    static final FunctionDescriptor sched_setparam$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sched_setparam$MH = RuntimeHelper.downcallHandle(
+        "sched_setparam",
+        constants$11.sched_setparam$FUNC
+    );
+    static final FunctionDescriptor sched_getparam$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sched_getparam$MH = RuntimeHelper.downcallHandle(
+        "sched_getparam",
+        constants$11.sched_getparam$FUNC
+    );
+    static final FunctionDescriptor sched_setscheduler$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sched_setscheduler$MH = RuntimeHelper.downcallHandle(
+        "sched_setscheduler",
+        constants$11.sched_setscheduler$FUNC
+    );
+    static final FunctionDescriptor sched_getscheduler$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_writev2$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_writev2",
-        constants$11.io_uring_prep_writev2$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_write_fixed$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_write_fixed$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_write_fixed",
-        constants$11.io_uring_prep_write_fixed$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_recvmsg$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_recvmsg$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_recvmsg",
-        constants$11.io_uring_prep_recvmsg$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_recvmsg_multishot$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_recvmsg_multishot$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_recvmsg_multishot",
-        constants$11.io_uring_prep_recvmsg_multishot$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_sendmsg$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_sendmsg$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_sendmsg",
-        constants$11.io_uring_prep_sendmsg$FUNC
-    );
-    static final FunctionDescriptor __io_uring_prep_poll_mask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle __io_uring_prep_poll_mask$MH = RuntimeHelper.downcallHandle(
-        "__io_uring_prep_poll_mask",
-        constants$11.__io_uring_prep_poll_mask$FUNC
+    static final MethodHandle sched_getscheduler$MH = RuntimeHelper.downcallHandle(
+        "sched_getscheduler",
+        constants$11.sched_getscheduler$FUNC
     );
 }
 

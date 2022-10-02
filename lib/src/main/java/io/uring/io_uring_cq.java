@@ -19,9 +19,7 @@ public class io_uring_cq {
         Constants$root.C_POINTER$LAYOUT.withName("cqes"),
         Constants$root.C_LONG_LONG$LAYOUT.withName("ring_sz"),
         Constants$root.C_POINTER$LAYOUT.withName("ring_ptr"),
-        Constants$root.C_INT$LAYOUT.withName("ring_mask"),
-        Constants$root.C_INT$LAYOUT.withName("ring_entries"),
-        MemoryLayout.sequenceLayout(2, Constants$root.C_INT$LAYOUT).withName("pad")
+        MemoryLayout.sequenceLayout(4, Constants$root.C_INT$LAYOUT).withName("pad")
     ).withName("io_uring_cq");
     public static MemoryLayout $LAYOUT() {
         return io_uring_cq.$struct$LAYOUT;
@@ -170,40 +168,8 @@ public class io_uring_cq {
     public static void ring_ptr$set(MemorySegment seg, long index, MemoryAddress x) {
         io_uring_cq.ring_ptr$VH.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle ring_mask$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("ring_mask"));
-    public static VarHandle ring_mask$VH() {
-        return io_uring_cq.ring_mask$VH;
-    }
-    public static int ring_mask$get(MemorySegment seg) {
-        return (int)io_uring_cq.ring_mask$VH.get(seg);
-    }
-    public static void ring_mask$set( MemorySegment seg, int x) {
-        io_uring_cq.ring_mask$VH.set(seg, x);
-    }
-    public static int ring_mask$get(MemorySegment seg, long index) {
-        return (int)io_uring_cq.ring_mask$VH.get(seg.asSlice(index*sizeof()));
-    }
-    public static void ring_mask$set(MemorySegment seg, long index, int x) {
-        io_uring_cq.ring_mask$VH.set(seg.asSlice(index*sizeof()), x);
-    }
-    static final VarHandle ring_entries$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("ring_entries"));
-    public static VarHandle ring_entries$VH() {
-        return io_uring_cq.ring_entries$VH;
-    }
-    public static int ring_entries$get(MemorySegment seg) {
-        return (int)io_uring_cq.ring_entries$VH.get(seg);
-    }
-    public static void ring_entries$set( MemorySegment seg, int x) {
-        io_uring_cq.ring_entries$VH.set(seg, x);
-    }
-    public static int ring_entries$get(MemorySegment seg, long index) {
-        return (int)io_uring_cq.ring_entries$VH.get(seg.asSlice(index*sizeof()));
-    }
-    public static void ring_entries$set(MemorySegment seg, long index, int x) {
-        io_uring_cq.ring_entries$VH.set(seg.asSlice(index*sizeof()), x);
-    }
     public static MemorySegment pad$slice(MemorySegment seg) {
-        return seg.asSlice(80, 8);
+        return seg.asSlice(72, 16);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

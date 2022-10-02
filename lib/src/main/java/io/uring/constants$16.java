@@ -9,71 +9,41 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$16 {
 
-    static final FunctionDescriptor io_uring_prep_read$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
+    static final FunctionDescriptor sig_t$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_read$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_read",
-        constants$16.io_uring_prep_read$FUNC
+    static final MethodHandle sig_t$MH = RuntimeHelper.downcallHandle(
+        constants$16.sig_t$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_write$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_write$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_write",
-        constants$16.io_uring_prep_write$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_statx$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor sigemptyset$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_prep_statx$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_statx",
-        constants$16.io_uring_prep_statx$FUNC
+    static final MethodHandle sigemptyset$MH = RuntimeHelper.downcallHandle(
+        "sigemptyset",
+        constants$16.sigemptyset$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_fadvise$FUNC = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor sigfillset$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sigfillset$MH = RuntimeHelper.downcallHandle(
+        "sigfillset",
+        constants$16.sigfillset$FUNC
+    );
+    static final FunctionDescriptor sigaddset$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_fadvise$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_fadvise",
-        constants$16.io_uring_prep_fadvise$FUNC
+    static final MethodHandle sigaddset$MH = RuntimeHelper.downcallHandle(
+        "sigaddset",
+        constants$16.sigaddset$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_madvise$FUNC = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor sigdelset$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_madvise$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_madvise",
-        constants$16.io_uring_prep_madvise$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_send$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_send$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_send",
-        constants$16.io_uring_prep_send$FUNC
+    static final MethodHandle sigdelset$MH = RuntimeHelper.downcallHandle(
+        "sigdelset",
+        constants$16.sigdelset$FUNC
     );
 }
 

@@ -9,55 +9,39 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$9 {
 
-    static final FunctionDescriptor io_uring_cqe_get_data$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor __swab32s$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_cqe_get_data$MH = RuntimeHelper.downcallHandle(
-        "io_uring_cqe_get_data",
-        constants$9.io_uring_cqe_get_data$FUNC
+    static final MethodHandle __swab32s$MH = RuntimeHelper.downcallHandle(
+        "__swab32s",
+        constants$9.__swab32s$FUNC
     );
-    static final FunctionDescriptor io_uring_sqe_set_data64$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle io_uring_sqe_set_data64$MH = RuntimeHelper.downcallHandle(
-        "io_uring_sqe_set_data64",
-        constants$9.io_uring_sqe_set_data64$FUNC
-    );
-    static final FunctionDescriptor io_uring_cqe_get_data64$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+    static final FunctionDescriptor __swab64s$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_cqe_get_data64$MH = RuntimeHelper.downcallHandle(
-        "io_uring_cqe_get_data64",
-        constants$9.io_uring_cqe_get_data64$FUNC
+    static final MethodHandle __swab64s$MH = RuntimeHelper.downcallHandle(
+        "__swab64s",
+        constants$9.__swab64s$FUNC
     );
-    static final FunctionDescriptor io_uring_sqe_set_flags$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
+    static final FunctionDescriptor __swahw32s$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_sqe_set_flags$MH = RuntimeHelper.downcallHandle(
-        "io_uring_sqe_set_flags",
-        constants$9.io_uring_sqe_set_flags$FUNC
+    static final MethodHandle __swahw32s$MH = RuntimeHelper.downcallHandle(
+        "__swahw32s",
+        constants$9.__swahw32s$FUNC
     );
-    static final FunctionDescriptor __io_uring_set_target_fixed_file$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
+    static final FunctionDescriptor __swahb32s$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle __io_uring_set_target_fixed_file$MH = RuntimeHelper.downcallHandle(
-        "__io_uring_set_target_fixed_file",
-        constants$9.__io_uring_set_target_fixed_file$FUNC
+    static final MethodHandle __swahb32s$MH = RuntimeHelper.downcallHandle(
+        "__swahb32s",
+        constants$9.__swahb32s$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_rw$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
+    static final FunctionDescriptor clone$__fn$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_prep_rw$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_rw",
-        constants$9.io_uring_prep_rw$FUNC
+    static final MethodHandle clone$__fn$MH = RuntimeHelper.downcallHandle(
+        constants$9.clone$__fn$FUNC
     );
 }
 

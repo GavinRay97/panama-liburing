@@ -9,65 +9,55 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$19 {
 
-    static final FunctionDescriptor io_uring_prep_epoll_ctl$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor sigreturn$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_prep_epoll_ctl$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_epoll_ctl",
-        constants$19.io_uring_prep_epoll_ctl$FUNC
+    static final MethodHandle sigreturn$MH = RuntimeHelper.downcallHandle(
+        "sigreturn",
+        constants$19.sigreturn$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_provide_buffers$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor siginterrupt$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_provide_buffers$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_provide_buffers",
-        constants$19.io_uring_prep_provide_buffers$FUNC
+    static final MethodHandle siginterrupt$MH = RuntimeHelper.downcallHandle(
+        "siginterrupt",
+        constants$19.siginterrupt$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_remove_buffers$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_remove_buffers$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_remove_buffers",
-        constants$19.io_uring_prep_remove_buffers$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_shutdown$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_shutdown$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_shutdown",
-        constants$19.io_uring_prep_shutdown$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_unlinkat$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor access$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_unlinkat$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_unlinkat",
-        constants$19.io_uring_prep_unlinkat$FUNC
+    static final MethodHandle access$MH = RuntimeHelper.downcallHandle(
+        "access",
+        constants$19.access$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_unlink$FUNC = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor euidaccess$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle euidaccess$MH = RuntimeHelper.downcallHandle(
+        "euidaccess",
+        constants$19.euidaccess$FUNC
+    );
+    static final FunctionDescriptor eaccess$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle eaccess$MH = RuntimeHelper.downcallHandle(
+        "eaccess",
+        constants$19.eaccess$FUNC
+    );
+    static final FunctionDescriptor execveat$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_unlink$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_unlink",
-        constants$19.io_uring_prep_unlink$FUNC
+    static final MethodHandle execveat$MH = RuntimeHelper.downcallHandle(
+        "execveat",
+        constants$19.execveat$FUNC
     );
 }
 

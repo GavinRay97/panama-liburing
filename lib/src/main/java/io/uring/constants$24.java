@@ -9,53 +9,49 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$24 {
 
-    static final FunctionDescriptor io_uring_wait_cqe_nr$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor getcwd$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle getcwd$MH = RuntimeHelper.downcallHandle(
+        "getcwd",
+        constants$24.getcwd$FUNC
+    );
+    static final FunctionDescriptor get_current_dir_name$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT);
+    static final MethodHandle get_current_dir_name$MH = RuntimeHelper.downcallHandle(
+        "get_current_dir_name",
+        constants$24.get_current_dir_name$FUNC
+    );
+    static final FunctionDescriptor getwd$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle getwd$MH = RuntimeHelper.downcallHandle(
+        "getwd",
+        constants$24.getwd$FUNC
+    );
+    static final FunctionDescriptor dup$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_wait_cqe_nr$MH = RuntimeHelper.downcallHandle(
-        "io_uring_wait_cqe_nr",
-        constants$24.io_uring_wait_cqe_nr$FUNC
+    static final MethodHandle dup$MH = RuntimeHelper.downcallHandle(
+        "dup",
+        constants$24.dup$FUNC
     );
-    static final FunctionDescriptor __io_uring_peek_cqe$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle __io_uring_peek_cqe$MH = RuntimeHelper.downcallHandle(
-        "__io_uring_peek_cqe",
-        constants$24.__io_uring_peek_cqe$FUNC
-    );
-    static final FunctionDescriptor io_uring_peek_cqe$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_peek_cqe$MH = RuntimeHelper.downcallHandle(
-        "io_uring_peek_cqe",
-        constants$24.io_uring_peek_cqe$FUNC
-    );
-    static final FunctionDescriptor io_uring_wait_cqe$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_wait_cqe$MH = RuntimeHelper.downcallHandle(
-        "io_uring_wait_cqe",
-        constants$24.io_uring_wait_cqe$FUNC
-    );
-    static final FunctionDescriptor _io_uring_get_sqe$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle _io_uring_get_sqe$MH = RuntimeHelper.downcallHandle(
-        "_io_uring_get_sqe",
-        constants$24._io_uring_get_sqe$FUNC
-    );
-    static final FunctionDescriptor io_uring_buf_ring_mask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor dup2$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_buf_ring_mask$MH = RuntimeHelper.downcallHandle(
-        "io_uring_buf_ring_mask",
-        constants$24.io_uring_buf_ring_mask$FUNC
+    static final MethodHandle dup2$MH = RuntimeHelper.downcallHandle(
+        "dup2",
+        constants$24.dup2$FUNC
+    );
+    static final FunctionDescriptor dup3$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle dup3$MH = RuntimeHelper.downcallHandle(
+        "dup3",
+        constants$24.dup3$FUNC
     );
 }
 

@@ -9,66 +9,56 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$20 {
 
-    static final FunctionDescriptor io_uring_prep_renameat$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor faccessat$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_renameat$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_renameat",
-        constants$20.io_uring_prep_renameat$FUNC
+    static final MethodHandle faccessat$MH = RuntimeHelper.downcallHandle(
+        "faccessat",
+        constants$20.faccessat$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_rename$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_rename$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_rename",
-        constants$20.io_uring_prep_rename$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_sync_file_range$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor lseek$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_sync_file_range$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_sync_file_range",
-        constants$20.io_uring_prep_sync_file_range$FUNC
+    static final MethodHandle lseek$MH = RuntimeHelper.downcallHandle(
+        "lseek",
+        constants$20.lseek$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_mkdirat$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor lseek64$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_mkdirat$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_mkdirat",
-        constants$20.io_uring_prep_mkdirat$FUNC
+    static final MethodHandle lseek64$MH = RuntimeHelper.downcallHandle(
+        "lseek64",
+        constants$20.lseek64$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_mkdir$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor close$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_mkdir$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_mkdir",
-        constants$20.io_uring_prep_mkdir$FUNC
+    static final MethodHandle close$MH = RuntimeHelper.downcallHandle(
+        "close",
+        constants$20.close$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_symlinkat$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor closefrom$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle closefrom$MH = RuntimeHelper.downcallHandle(
+        "closefrom",
+        constants$20.closefrom$FUNC
+    );
+    static final FunctionDescriptor read$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
     );
-    static final MethodHandle io_uring_prep_symlinkat$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_symlinkat",
-        constants$20.io_uring_prep_symlinkat$FUNC
+    static final MethodHandle read$MH = RuntimeHelper.downcallHandle(
+        "read",
+        constants$20.read$FUNC
     );
 }
 

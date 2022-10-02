@@ -9,70 +9,61 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$21 {
 
-    static final FunctionDescriptor io_uring_prep_symlink$FUNC = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor write$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle write$MH = RuntimeHelper.downcallHandle(
+        "write",
+        constants$21.write$FUNC
+    );
+    static final FunctionDescriptor pread$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle pread$MH = RuntimeHelper.downcallHandle(
+        "pread",
+        constants$21.pread$FUNC
+    );
+    static final FunctionDescriptor pwrite$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle pwrite$MH = RuntimeHelper.downcallHandle(
+        "pwrite",
+        constants$21.pwrite$FUNC
+    );
+    static final FunctionDescriptor pread64$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle pread64$MH = RuntimeHelper.downcallHandle(
+        "pread64",
+        constants$21.pread64$FUNC
+    );
+    static final FunctionDescriptor pwrite64$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle pwrite64$MH = RuntimeHelper.downcallHandle(
+        "pwrite64",
+        constants$21.pwrite64$FUNC
+    );
+    static final FunctionDescriptor pipe$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_prep_symlink$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_symlink",
-        constants$21.io_uring_prep_symlink$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_linkat$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_linkat$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_linkat",
-        constants$21.io_uring_prep_linkat$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_link$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_link$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_link",
-        constants$21.io_uring_prep_link$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_msg_ring$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_msg_ring$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_msg_ring",
-        constants$21.io_uring_prep_msg_ring$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_getxattr$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_getxattr$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_getxattr",
-        constants$21.io_uring_prep_getxattr$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_setxattr$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_setxattr$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_setxattr",
-        constants$21.io_uring_prep_setxattr$FUNC
+    static final MethodHandle pipe$MH = RuntimeHelper.downcallHandle(
+        "pipe",
+        constants$21.pipe$FUNC
     );
 }
 

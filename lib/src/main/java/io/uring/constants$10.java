@@ -9,75 +9,51 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$10 {
 
-    static final FunctionDescriptor io_uring_prep_splice$FUNC = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor clone$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle clone$MH = RuntimeHelper.downcallHandleVariadic(
+        "clone",
+        constants$10.clone$FUNC
+    );
+    static final FunctionDescriptor unshare$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle unshare$MH = RuntimeHelper.downcallHandle(
+        "unshare",
+        constants$10.unshare$FUNC
+    );
+    static final FunctionDescriptor sched_getcpu$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
+    static final MethodHandle sched_getcpu$MH = RuntimeHelper.downcallHandle(
+        "sched_getcpu",
+        constants$10.sched_getcpu$FUNC
+    );
+    static final FunctionDescriptor getcpu$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle getcpu$MH = RuntimeHelper.downcallHandle(
+        "getcpu",
+        constants$10.getcpu$FUNC
+    );
+    static final FunctionDescriptor setns$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_splice$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_splice",
-        constants$10.io_uring_prep_splice$FUNC
+    static final MethodHandle setns$MH = RuntimeHelper.downcallHandle(
+        "setns",
+        constants$10.setns$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_tee$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_tee$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_tee",
-        constants$10.io_uring_prep_tee$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_readv$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_readv$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_readv",
-        constants$10.io_uring_prep_readv$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_readv2$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor __sched_cpucount$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_prep_readv2$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_readv2",
-        constants$10.io_uring_prep_readv2$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_read_fixed$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_read_fixed$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_read_fixed",
-        constants$10.io_uring_prep_read_fixed$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_writev$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_writev$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_writev",
-        constants$10.io_uring_prep_writev$FUNC
+    static final MethodHandle __sched_cpucount$MH = RuntimeHelper.downcallHandle(
+        "__sched_cpucount",
+        constants$10.__sched_cpucount$FUNC
     );
 }
 

@@ -16,11 +16,7 @@ public class io_uring_sqe {
         Constants$root.C_INT$LAYOUT.withName("fd"),
         MemoryLayout.unionLayout(
             Constants$root.C_LONG_LONG$LAYOUT.withName("off"),
-            Constants$root.C_LONG_LONG$LAYOUT.withName("addr2"),
-            MemoryLayout.structLayout(
-                Constants$root.C_INT$LAYOUT.withName("cmd_op"),
-                Constants$root.C_INT$LAYOUT.withName("__pad1")
-            ).withName("$anon$0")
+            Constants$root.C_LONG_LONG$LAYOUT.withName("addr2")
         ).withName("$anon$0"),
         MemoryLayout.unionLayout(
             Constants$root.C_LONG_LONG$LAYOUT.withName("addr"),
@@ -44,8 +40,7 @@ public class io_uring_sqe {
             Constants$root.C_INT$LAYOUT.withName("rename_flags"),
             Constants$root.C_INT$LAYOUT.withName("unlink_flags"),
             Constants$root.C_INT$LAYOUT.withName("hardlink_flags"),
-            Constants$root.C_INT$LAYOUT.withName("xattr_flags"),
-            Constants$root.C_INT$LAYOUT.withName("msg_ring_flags")
+            Constants$root.C_INT$LAYOUT.withName("xattr_flags")
         ).withName("$anon$2"),
         Constants$root.C_LONG_LONG$LAYOUT.withName("user_data"),
         MemoryLayout.unionLayout(
@@ -55,19 +50,10 @@ public class io_uring_sqe {
         Constants$root.C_SHORT$LAYOUT.withName("personality"),
         MemoryLayout.unionLayout(
             Constants$root.C_INT$LAYOUT.withName("splice_fd_in"),
-            Constants$root.C_INT$LAYOUT.withName("file_index"),
-            MemoryLayout.structLayout(
-                Constants$root.C_SHORT$LAYOUT.withName("addr_len"),
-                MemoryLayout.sequenceLayout(1, Constants$root.C_SHORT$LAYOUT).withName("__pad3")
-            ).withName("$anon$0")
+            Constants$root.C_INT$LAYOUT.withName("file_index")
         ).withName("$anon$4"),
-        MemoryLayout.unionLayout(
-            MemoryLayout.structLayout(
-                Constants$root.C_LONG_LONG$LAYOUT.withName("addr3"),
-                MemoryLayout.sequenceLayout(1, Constants$root.C_LONG_LONG$LAYOUT).withName("__pad2")
-            ).withName("$anon$0"),
-            MemoryLayout.sequenceLayout(0, Constants$root.C_CHAR$LAYOUT).withName("cmd")
-        ).withName("$anon$5")
+        Constants$root.C_LONG_LONG$LAYOUT.withName("addr3"),
+        MemoryLayout.sequenceLayout(1, Constants$root.C_LONG_LONG$LAYOUT).withName("__pad2")
     ).withName("io_uring_sqe");
     public static MemoryLayout $LAYOUT() {
         return io_uring_sqe.$struct$LAYOUT;
@@ -167,38 +153,6 @@ public class io_uring_sqe {
     }
     public static void addr2$set(MemorySegment seg, long index, long x) {
         io_uring_sqe.addr2$VH.set(seg.asSlice(index*sizeof()), x);
-    }
-    static final VarHandle cmd_op$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("$anon$0"), MemoryLayout.PathElement.groupElement("$anon$0"), MemoryLayout.PathElement.groupElement("cmd_op"));
-    public static VarHandle cmd_op$VH() {
-        return io_uring_sqe.cmd_op$VH;
-    }
-    public static int cmd_op$get(MemorySegment seg) {
-        return (int)io_uring_sqe.cmd_op$VH.get(seg);
-    }
-    public static void cmd_op$set( MemorySegment seg, int x) {
-        io_uring_sqe.cmd_op$VH.set(seg, x);
-    }
-    public static int cmd_op$get(MemorySegment seg, long index) {
-        return (int)io_uring_sqe.cmd_op$VH.get(seg.asSlice(index*sizeof()));
-    }
-    public static void cmd_op$set(MemorySegment seg, long index, int x) {
-        io_uring_sqe.cmd_op$VH.set(seg.asSlice(index*sizeof()), x);
-    }
-    static final VarHandle __pad1$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("$anon$0"), MemoryLayout.PathElement.groupElement("$anon$0"), MemoryLayout.PathElement.groupElement("__pad1"));
-    public static VarHandle __pad1$VH() {
-        return io_uring_sqe.__pad1$VH;
-    }
-    public static int __pad1$get(MemorySegment seg) {
-        return (int)io_uring_sqe.__pad1$VH.get(seg);
-    }
-    public static void __pad1$set( MemorySegment seg, int x) {
-        io_uring_sqe.__pad1$VH.set(seg, x);
-    }
-    public static int __pad1$get(MemorySegment seg, long index) {
-        return (int)io_uring_sqe.__pad1$VH.get(seg.asSlice(index*sizeof()));
-    }
-    public static void __pad1$set(MemorySegment seg, long index, int x) {
-        io_uring_sqe.__pad1$VH.set(seg.asSlice(index*sizeof()), x);
     }
     static final VarHandle addr$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("$anon$1"), MemoryLayout.PathElement.groupElement("addr"));
     public static VarHandle addr$VH() {
@@ -520,22 +474,6 @@ public class io_uring_sqe {
     public static void xattr_flags$set(MemorySegment seg, long index, int x) {
         io_uring_sqe.xattr_flags$VH.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle msg_ring_flags$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("$anon$2"), MemoryLayout.PathElement.groupElement("msg_ring_flags"));
-    public static VarHandle msg_ring_flags$VH() {
-        return io_uring_sqe.msg_ring_flags$VH;
-    }
-    public static int msg_ring_flags$get(MemorySegment seg) {
-        return (int)io_uring_sqe.msg_ring_flags$VH.get(seg);
-    }
-    public static void msg_ring_flags$set( MemorySegment seg, int x) {
-        io_uring_sqe.msg_ring_flags$VH.set(seg, x);
-    }
-    public static int msg_ring_flags$get(MemorySegment seg, long index) {
-        return (int)io_uring_sqe.msg_ring_flags$VH.get(seg.asSlice(index*sizeof()));
-    }
-    public static void msg_ring_flags$set(MemorySegment seg, long index, int x) {
-        io_uring_sqe.msg_ring_flags$VH.set(seg.asSlice(index*sizeof()), x);
-    }
     static final VarHandle user_data$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("user_data"));
     public static VarHandle user_data$VH() {
         return io_uring_sqe.user_data$VH;
@@ -632,26 +570,7 @@ public class io_uring_sqe {
     public static void file_index$set(MemorySegment seg, long index, int x) {
         io_uring_sqe.file_index$VH.set(seg.asSlice(index*sizeof()), x);
     }
-    static final VarHandle addr_len$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("$anon$4"), MemoryLayout.PathElement.groupElement("$anon$0"), MemoryLayout.PathElement.groupElement("addr_len"));
-    public static VarHandle addr_len$VH() {
-        return io_uring_sqe.addr_len$VH;
-    }
-    public static short addr_len$get(MemorySegment seg) {
-        return (short)io_uring_sqe.addr_len$VH.get(seg);
-    }
-    public static void addr_len$set( MemorySegment seg, short x) {
-        io_uring_sqe.addr_len$VH.set(seg, x);
-    }
-    public static short addr_len$get(MemorySegment seg, long index) {
-        return (short)io_uring_sqe.addr_len$VH.get(seg.asSlice(index*sizeof()));
-    }
-    public static void addr_len$set(MemorySegment seg, long index, short x) {
-        io_uring_sqe.addr_len$VH.set(seg.asSlice(index*sizeof()), x);
-    }
-    public static MemorySegment __pad3$slice(MemorySegment seg) {
-        return seg.asSlice(46, 2);
-    }
-    static final VarHandle addr3$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("$anon$5"), MemoryLayout.PathElement.groupElement("$anon$0"), MemoryLayout.PathElement.groupElement("addr3"));
+    static final VarHandle addr3$VH = $struct$LAYOUT.varHandle(MemoryLayout.PathElement.groupElement("addr3"));
     public static VarHandle addr3$VH() {
         return io_uring_sqe.addr3$VH;
     }

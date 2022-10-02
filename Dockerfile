@@ -1,6 +1,14 @@
 FROM quay.io/fedora/fedora:38
 
-RUN dnf install -y liburing-devel zip unzip git \
+RUN dnf install -y \
+    liburing-devel \
+    zip \
+    unzip \
+    git \
+    diffutils \
+    patch \
+    cmake \
+    ninja-build \
     && dnf group install -y "C Development Tools and Libraries"
 
 RUN curl -s "https://get.sdkman.io" | bash

@@ -9,59 +9,47 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$7 {
 
-    static final FunctionDescriptor io_uring_register_sync_cancel$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
+    static final FunctionDescriptor __fswab16$FUNC = FunctionDescriptor.of(Constants$root.C_SHORT$LAYOUT,
+        Constants$root.C_SHORT$LAYOUT
     );
-    static final MethodHandle io_uring_register_sync_cancel$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_sync_cancel",
-        constants$7.io_uring_register_sync_cancel$FUNC
+    static final MethodHandle __fswab16$MH = RuntimeHelper.downcallHandle(
+        "__fswab16",
+        constants$7.__fswab16$FUNC
     );
-    static final FunctionDescriptor io_uring_register_file_alloc_range$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor __fswab32$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_register_file_alloc_range$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_file_alloc_range",
-        constants$7.io_uring_register_file_alloc_range$FUNC
+    static final MethodHandle __fswab32$MH = RuntimeHelper.downcallHandle(
+        "__fswab32",
+        constants$7.__fswab32$FUNC
     );
-    static final FunctionDescriptor io_uring_get_events$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_get_events$MH = RuntimeHelper.downcallHandle(
-        "io_uring_get_events",
-        constants$7.io_uring_get_events$FUNC
-    );
-    static final FunctionDescriptor io_uring_submit_and_get_events$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_submit_and_get_events$MH = RuntimeHelper.downcallHandle(
-        "io_uring_submit_and_get_events",
-        constants$7.io_uring_submit_and_get_events$FUNC
-    );
-    static final FunctionDescriptor io_uring_enter$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_enter$MH = RuntimeHelper.downcallHandle(
-        "io_uring_enter",
-        constants$7.io_uring_enter$FUNC
-    );
-    static final FunctionDescriptor io_uring_enter2$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor __fswab64$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_LONG_LONG$LAYOUT
     );
-    static final MethodHandle io_uring_enter2$MH = RuntimeHelper.downcallHandle(
-        "io_uring_enter2",
-        constants$7.io_uring_enter2$FUNC
+    static final MethodHandle __fswab64$MH = RuntimeHelper.downcallHandle(
+        "__fswab64",
+        constants$7.__fswab64$FUNC
+    );
+    static final FunctionDescriptor __fswahw32$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle __fswahw32$MH = RuntimeHelper.downcallHandle(
+        "__fswahw32",
+        constants$7.__fswahw32$FUNC
+    );
+    static final FunctionDescriptor __fswahb32$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle __fswahb32$MH = RuntimeHelper.downcallHandle(
+        "__fswahb32",
+        constants$7.__fswahb32$FUNC
+    );
+    static final FunctionDescriptor __swab$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle __swab$MH = RuntimeHelper.downcallHandle(
+        "__swab",
+        constants$7.__swab$FUNC
     );
 }
 

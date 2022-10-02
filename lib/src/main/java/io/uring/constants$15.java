@@ -9,65 +9,37 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$15 {
 
-    static final FunctionDescriptor io_uring_prep_files_update$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor sigpause$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_files_update$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_files_update",
-        constants$15.io_uring_prep_files_update$FUNC
+    static final MethodHandle sigpause$MH = RuntimeHelper.downcallHandle(
+        "sigpause",
+        constants$15.sigpause$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_fallocate$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_fallocate$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_fallocate",
-        constants$15.io_uring_prep_fallocate$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_openat$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor sigblock$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_openat$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_openat",
-        constants$15.io_uring_prep_openat$FUNC
+    static final MethodHandle sigblock$MH = RuntimeHelper.downcallHandle(
+        "sigblock",
+        constants$15.sigblock$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_openat_direct$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor sigsetmask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_openat_direct$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_openat_direct",
-        constants$15.io_uring_prep_openat_direct$FUNC
+    static final MethodHandle sigsetmask$MH = RuntimeHelper.downcallHandle(
+        "sigsetmask",
+        constants$15.sigsetmask$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_close$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor siggetmask$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
+    static final MethodHandle siggetmask$MH = RuntimeHelper.downcallHandle(
+        "siggetmask",
+        constants$15.siggetmask$FUNC
+    );
+    static final FunctionDescriptor sighandler_t$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_close$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_close",
-        constants$15.io_uring_prep_close$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_close_direct$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_close_direct$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_close_direct",
-        constants$15.io_uring_prep_close_direct$FUNC
+    static final MethodHandle sighandler_t$MH = RuntimeHelper.downcallHandle(
+        constants$15.sighandler_t$FUNC
     );
 }
 

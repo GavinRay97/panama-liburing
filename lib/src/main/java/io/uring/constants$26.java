@@ -9,13 +9,52 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$26 {
 
-    static final FunctionDescriptor io_uring_mlock_size_params$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor execl$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_mlock_size_params$MH = RuntimeHelper.downcallHandle(
-        "io_uring_mlock_size_params",
-        constants$26.io_uring_mlock_size_params$FUNC
+    static final MethodHandle execl$MH = RuntimeHelper.downcallHandleVariadic(
+        "execl",
+        constants$26.execl$FUNC
+    );
+    static final FunctionDescriptor execvp$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle execvp$MH = RuntimeHelper.downcallHandle(
+        "execvp",
+        constants$26.execvp$FUNC
+    );
+    static final FunctionDescriptor execlp$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle execlp$MH = RuntimeHelper.downcallHandleVariadic(
+        "execlp",
+        constants$26.execlp$FUNC
+    );
+    static final FunctionDescriptor execvpe$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle execvpe$MH = RuntimeHelper.downcallHandle(
+        "execvpe",
+        constants$26.execvpe$FUNC
+    );
+    static final FunctionDescriptor nice$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle nice$MH = RuntimeHelper.downcallHandle(
+        "nice",
+        constants$26.nice$FUNC
+    );
+    static final FunctionDescriptor _exit$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle _exit$MH = RuntimeHelper.downcallHandle(
+        "_exit",
+        constants$26._exit$FUNC
     );
 }
 

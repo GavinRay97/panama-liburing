@@ -9,56 +9,45 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$25 {
 
-    static final FunctionDescriptor io_uring_buf_ring_init$FUNC = FunctionDescriptor.ofVoid(
+    static final  OfAddress __environ$LAYOUT = Constants$root.C_POINTER$LAYOUT;
+    static final VarHandle __environ$VH = constants$25.__environ$LAYOUT.varHandle();
+    static final MemorySegment __environ$SEGMENT = RuntimeHelper.lookupGlobalVariable("__environ", constants$25.__environ$LAYOUT);
+    static final  OfAddress environ$LAYOUT = Constants$root.C_POINTER$LAYOUT;
+    static final VarHandle environ$VH = constants$25.environ$LAYOUT.varHandle();
+    static final MemorySegment environ$SEGMENT = RuntimeHelper.lookupGlobalVariable("environ", constants$25.environ$LAYOUT);
+    static final FunctionDescriptor execve$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_buf_ring_init$MH = RuntimeHelper.downcallHandle(
-        "io_uring_buf_ring_init",
-        constants$25.io_uring_buf_ring_init$FUNC
+    static final MethodHandle execve$MH = RuntimeHelper.downcallHandle(
+        "execve",
+        constants$25.execve$FUNC
     );
-    static final FunctionDescriptor io_uring_buf_ring_add$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor fexecve$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_SHORT$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_buf_ring_add$MH = RuntimeHelper.downcallHandle(
-        "io_uring_buf_ring_add",
-        constants$25.io_uring_buf_ring_add$FUNC
-    );
-    static final FunctionDescriptor io_uring_buf_ring_advance$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_buf_ring_advance$MH = RuntimeHelper.downcallHandle(
-        "io_uring_buf_ring_advance",
-        constants$25.io_uring_buf_ring_advance$FUNC
-    );
-    static final FunctionDescriptor io_uring_buf_ring_cq_advance$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_buf_ring_cq_advance$MH = RuntimeHelper.downcallHandle(
-        "io_uring_buf_ring_cq_advance",
-        constants$25.io_uring_buf_ring_cq_advance$FUNC
-    );
-    static final FunctionDescriptor io_uring_get_sqe$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_get_sqe$MH = RuntimeHelper.downcallHandle(
-        "io_uring_get_sqe",
-        constants$25.io_uring_get_sqe$FUNC
+    static final MethodHandle fexecve$MH = RuntimeHelper.downcallHandle(
+        "fexecve",
+        constants$25.fexecve$FUNC
     );
-    static final FunctionDescriptor io_uring_mlock_size$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
+    static final FunctionDescriptor execv$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_mlock_size$MH = RuntimeHelper.downcallHandle(
-        "io_uring_mlock_size",
-        constants$25.io_uring_mlock_size$FUNC
+    static final MethodHandle execv$MH = RuntimeHelper.downcallHandle(
+        "execv",
+        constants$25.execv$FUNC
+    );
+    static final FunctionDescriptor execle$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle execle$MH = RuntimeHelper.downcallHandleVariadic(
+        "execle",
+        constants$25.execle$FUNC
     );
 }
 

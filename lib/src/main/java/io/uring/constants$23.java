@@ -9,48 +9,57 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$23 {
 
-    static final FunctionDescriptor io_uring_sq_space_left$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_sq_space_left$MH = RuntimeHelper.downcallHandle(
-        "io_uring_sq_space_left",
-        constants$23.io_uring_sq_space_left$FUNC
-    );
-    static final FunctionDescriptor io_uring_sqring_wait$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_sqring_wait$MH = RuntimeHelper.downcallHandle(
-        "io_uring_sqring_wait",
-        constants$23.io_uring_sqring_wait$FUNC
-    );
-    static final FunctionDescriptor io_uring_cq_ready$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_cq_ready$MH = RuntimeHelper.downcallHandle(
-        "io_uring_cq_ready",
-        constants$23.io_uring_cq_ready$FUNC
-    );
-    static final FunctionDescriptor io_uring_cq_has_overflow$FUNC = FunctionDescriptor.of(Constants$root.C_BOOL$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_cq_has_overflow$MH = RuntimeHelper.downcallHandle(
-        "io_uring_cq_has_overflow",
-        constants$23.io_uring_cq_has_overflow$FUNC
-    );
-    static final FunctionDescriptor io_uring_cq_eventfd_enabled$FUNC = FunctionDescriptor.of(Constants$root.C_BOOL$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_cq_eventfd_enabled$MH = RuntimeHelper.downcallHandle(
-        "io_uring_cq_eventfd_enabled",
-        constants$23.io_uring_cq_eventfd_enabled$FUNC
-    );
-    static final FunctionDescriptor io_uring_cq_eventfd_toggle$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor chown$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_BOOL$LAYOUT
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_cq_eventfd_toggle$MH = RuntimeHelper.downcallHandle(
-        "io_uring_cq_eventfd_toggle",
-        constants$23.io_uring_cq_eventfd_toggle$FUNC
+    static final MethodHandle chown$MH = RuntimeHelper.downcallHandle(
+        "chown",
+        constants$23.chown$FUNC
+    );
+    static final FunctionDescriptor fchown$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle fchown$MH = RuntimeHelper.downcallHandle(
+        "fchown",
+        constants$23.fchown$FUNC
+    );
+    static final FunctionDescriptor lchown$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle lchown$MH = RuntimeHelper.downcallHandle(
+        "lchown",
+        constants$23.lchown$FUNC
+    );
+    static final FunctionDescriptor fchownat$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle fchownat$MH = RuntimeHelper.downcallHandle(
+        "fchownat",
+        constants$23.fchownat$FUNC
+    );
+    static final FunctionDescriptor chdir$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle chdir$MH = RuntimeHelper.downcallHandle(
+        "chdir",
+        constants$23.chdir$FUNC
+    );
+    static final FunctionDescriptor fchdir$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle fchdir$MH = RuntimeHelper.downcallHandle(
+        "fchdir",
+        constants$23.fchdir$FUNC
     );
 }
 

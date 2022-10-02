@@ -9,58 +9,67 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$2 {
 
-    static final FunctionDescriptor io_uring_submit$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_submit$MH = RuntimeHelper.downcallHandle(
-        "io_uring_submit",
-        constants$2.io_uring_submit$FUNC
-    );
-    static final FunctionDescriptor io_uring_submit_and_wait$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor sync_file_range$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_submit_and_wait$MH = RuntimeHelper.downcallHandle(
-        "io_uring_submit_and_wait",
-        constants$2.io_uring_submit_and_wait$FUNC
+    static final MethodHandle sync_file_range$MH = RuntimeHelper.downcallHandle(
+        "sync_file_range",
+        constants$2.sync_file_range$FUNC
     );
-    static final FunctionDescriptor io_uring_submit_and_wait_timeout$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor vmsplice$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle vmsplice$MH = RuntimeHelper.downcallHandle(
+        "vmsplice",
+        constants$2.vmsplice$FUNC
+    );
+    static final FunctionDescriptor splice$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_submit_and_wait_timeout$MH = RuntimeHelper.downcallHandle(
-        "io_uring_submit_and_wait_timeout",
-        constants$2.io_uring_submit_and_wait_timeout$FUNC
-    );
-    static final FunctionDescriptor io_uring_register_buffers$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_register_buffers$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_buffers",
-        constants$2.io_uring_register_buffers$FUNC
+    static final MethodHandle splice$MH = RuntimeHelper.downcallHandle(
+        "splice",
+        constants$2.splice$FUNC
     );
-    static final FunctionDescriptor io_uring_register_buffers_tags$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor tee$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_register_buffers_tags$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_buffers_tags",
-        constants$2.io_uring_register_buffers_tags$FUNC
+    static final MethodHandle tee$MH = RuntimeHelper.downcallHandle(
+        "tee",
+        constants$2.tee$FUNC
     );
-    static final FunctionDescriptor io_uring_register_buffers_sparse$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
+    static final FunctionDescriptor fallocate$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
     );
-    static final MethodHandle io_uring_register_buffers_sparse$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_buffers_sparse",
-        constants$2.io_uring_register_buffers_sparse$FUNC
+    static final MethodHandle fallocate$MH = RuntimeHelper.downcallHandle(
+        "fallocate",
+        constants$2.fallocate$FUNC
+    );
+    static final FunctionDescriptor fallocate64$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle fallocate64$MH = RuntimeHelper.downcallHandle(
+        "fallocate64",
+        constants$2.fallocate64$FUNC
     );
 }
 

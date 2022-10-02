@@ -9,51 +9,55 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$6 {
 
-    static final FunctionDescriptor io_uring_unregister_iowq_aff$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_unregister_iowq_aff$MH = RuntimeHelper.downcallHandle(
-        "io_uring_unregister_iowq_aff",
-        constants$6.io_uring_unregister_iowq_aff$FUNC
-    );
-    static final FunctionDescriptor io_uring_register_iowq_max_workers$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_register_iowq_max_workers$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_iowq_max_workers",
-        constants$6.io_uring_register_iowq_max_workers$FUNC
-    );
-    static final FunctionDescriptor io_uring_register_ring_fd$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_register_ring_fd$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_ring_fd",
-        constants$6.io_uring_register_ring_fd$FUNC
-    );
-    static final FunctionDescriptor io_uring_unregister_ring_fd$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT
-    );
-    static final MethodHandle io_uring_unregister_ring_fd$MH = RuntimeHelper.downcallHandle(
-        "io_uring_unregister_ring_fd",
-        constants$6.io_uring_unregister_ring_fd$FUNC
-    );
-    static final FunctionDescriptor io_uring_register_buf_ring$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor strtoimax$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_register_buf_ring$MH = RuntimeHelper.downcallHandle(
-        "io_uring_register_buf_ring",
-        constants$6.io_uring_register_buf_ring$FUNC
+    static final MethodHandle strtoimax$MH = RuntimeHelper.downcallHandle(
+        "strtoimax",
+        constants$6.strtoimax$FUNC
     );
-    static final FunctionDescriptor io_uring_unregister_buf_ring$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor strtoumax$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_unregister_buf_ring$MH = RuntimeHelper.downcallHandle(
-        "io_uring_unregister_buf_ring",
-        constants$6.io_uring_unregister_buf_ring$FUNC
+    static final MethodHandle strtoumax$MH = RuntimeHelper.downcallHandle(
+        "strtoumax",
+        constants$6.strtoumax$FUNC
+    );
+    static final FunctionDescriptor wcstoimax$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle wcstoimax$MH = RuntimeHelper.downcallHandle(
+        "wcstoimax",
+        constants$6.wcstoimax$FUNC
+    );
+    static final FunctionDescriptor wcstoumax$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle wcstoumax$MH = RuntimeHelper.downcallHandle(
+        "wcstoumax",
+        constants$6.wcstoumax$FUNC
+    );
+    static final FunctionDescriptor __arch_swab32$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle __arch_swab32$MH = RuntimeHelper.downcallHandle(
+        "__arch_swab32",
+        constants$6.__arch_swab32$FUNC
+    );
+    static final FunctionDescriptor __arch_swab64$FUNC = FunctionDescriptor.of(Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT
+    );
+    static final MethodHandle __arch_swab64$MH = RuntimeHelper.downcallHandle(
+        "__arch_swab64",
+        constants$6.__arch_swab64$FUNC
     );
 }
 

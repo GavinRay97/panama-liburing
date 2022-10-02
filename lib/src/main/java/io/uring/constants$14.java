@@ -9,62 +9,51 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$14 {
 
-    static final FunctionDescriptor io_uring_prep_multishot_accept_direct$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_multishot_accept_direct$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_multishot_accept_direct",
-        constants$14.io_uring_prep_multishot_accept_direct$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_cancel64$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_cancel64$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_cancel64",
-        constants$14.io_uring_prep_cancel64$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_cancel$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_cancel$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_cancel",
-        constants$14.io_uring_prep_cancel$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_cancel_fd$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor killpg$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_cancel_fd$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_cancel_fd",
-        constants$14.io_uring_prep_cancel_fd$FUNC
+    static final MethodHandle killpg$MH = RuntimeHelper.downcallHandle(
+        "killpg",
+        constants$14.killpg$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_link_timeout$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor raise$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_link_timeout$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_link_timeout",
-        constants$14.io_uring_prep_link_timeout$FUNC
+    static final MethodHandle raise$MH = RuntimeHelper.downcallHandle(
+        "raise",
+        constants$14.raise$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_connect$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor ssignal$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle ssignal$MH = RuntimeHelper.downcallHandle(
+        "ssignal",
+        constants$14.ssignal$FUNC
+    );
+    static final FunctionDescriptor gsignal$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_connect$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_connect",
-        constants$14.io_uring_prep_connect$FUNC
+    static final MethodHandle gsignal$MH = RuntimeHelper.downcallHandle(
+        "gsignal",
+        constants$14.gsignal$FUNC
+    );
+    static final FunctionDescriptor psignal$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle psignal$MH = RuntimeHelper.downcallHandle(
+        "psignal",
+        constants$14.psignal$FUNC
+    );
+    static final FunctionDescriptor psiginfo$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle psiginfo$MH = RuntimeHelper.downcallHandle(
+        "psiginfo",
+        constants$14.psiginfo$FUNC
     );
 }
 

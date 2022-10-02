@@ -9,58 +9,50 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$12 {
 
-    static final FunctionDescriptor io_uring_prep_poll_add$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor sched_yield$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT);
+    static final MethodHandle sched_yield$MH = RuntimeHelper.downcallHandle(
+        "sched_yield",
+        constants$12.sched_yield$FUNC
+    );
+    static final FunctionDescriptor sched_get_priority_max$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_poll_add$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_poll_add",
-        constants$12.io_uring_prep_poll_add$FUNC
+    static final MethodHandle sched_get_priority_max$MH = RuntimeHelper.downcallHandle(
+        "sched_get_priority_max",
+        constants$12.sched_get_priority_max$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_poll_multishot$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
+    static final FunctionDescriptor sched_get_priority_min$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_poll_multishot$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_poll_multishot",
-        constants$12.io_uring_prep_poll_multishot$FUNC
+    static final MethodHandle sched_get_priority_min$MH = RuntimeHelper.downcallHandle(
+        "sched_get_priority_min",
+        constants$12.sched_get_priority_min$FUNC
     );
-    static final FunctionDescriptor io_uring_prep_poll_remove$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_poll_remove$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_poll_remove",
-        constants$12.io_uring_prep_poll_remove$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_poll_update$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
+    static final FunctionDescriptor sched_rr_get_interval$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_poll_update$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_poll_update",
-        constants$12.io_uring_prep_poll_update$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_fsync$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_fsync$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_fsync",
-        constants$12.io_uring_prep_fsync$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_nop$FUNC = FunctionDescriptor.ofVoid(
         Constants$root.C_POINTER$LAYOUT
     );
-    static final MethodHandle io_uring_prep_nop$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_nop",
-        constants$12.io_uring_prep_nop$FUNC
+    static final MethodHandle sched_rr_get_interval$MH = RuntimeHelper.downcallHandle(
+        "sched_rr_get_interval",
+        constants$12.sched_rr_get_interval$FUNC
+    );
+    static final FunctionDescriptor sched_setaffinity$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sched_setaffinity$MH = RuntimeHelper.downcallHandle(
+        "sched_setaffinity",
+        constants$12.sched_setaffinity$FUNC
+    );
+    static final FunctionDescriptor sched_getaffinity$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_LONG_LONG$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sched_getaffinity$MH = RuntimeHelper.downcallHandle(
+        "sched_getaffinity",
+        constants$12.sched_getaffinity$FUNC
     );
 }
 

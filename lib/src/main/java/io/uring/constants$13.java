@@ -9,68 +9,43 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 class constants$13 {
 
-    static final FunctionDescriptor io_uring_prep_timeout$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
+    static final FunctionDescriptor __sighandler_t$FUNC = FunctionDescriptor.ofVoid(
+        Constants$root.C_INT$LAYOUT
+    );
+    static final MethodHandle __sighandler_t$MH = RuntimeHelper.downcallHandle(
+        constants$13.__sighandler_t$FUNC
+    );
+    static final FunctionDescriptor __sysv_signal$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle __sysv_signal$MH = RuntimeHelper.downcallHandle(
+        "__sysv_signal",
+        constants$13.__sysv_signal$FUNC
+    );
+    static final FunctionDescriptor sysv_signal$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle sysv_signal$MH = RuntimeHelper.downcallHandle(
+        "sysv_signal",
+        constants$13.sysv_signal$FUNC
+    );
+    static final FunctionDescriptor signal$FUNC = FunctionDescriptor.of(Constants$root.C_POINTER$LAYOUT,
+        Constants$root.C_INT$LAYOUT,
+        Constants$root.C_POINTER$LAYOUT
+    );
+    static final MethodHandle signal$MH = RuntimeHelper.downcallHandle(
+        "signal",
+        constants$13.signal$FUNC
+    );
+    static final FunctionDescriptor kill$FUNC = FunctionDescriptor.of(Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT,
         Constants$root.C_INT$LAYOUT
     );
-    static final MethodHandle io_uring_prep_timeout$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_timeout",
-        constants$13.io_uring_prep_timeout$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_timeout_remove$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_timeout_remove$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_timeout_remove",
-        constants$13.io_uring_prep_timeout_remove$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_timeout_update$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_LONG_LONG$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_timeout_update$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_timeout_update",
-        constants$13.io_uring_prep_timeout_update$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_accept$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_accept$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_accept",
-        constants$13.io_uring_prep_accept$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_accept_direct$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_accept_direct$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_accept_direct",
-        constants$13.io_uring_prep_accept_direct$FUNC
-    );
-    static final FunctionDescriptor io_uring_prep_multishot_accept$FUNC = FunctionDescriptor.ofVoid(
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_POINTER$LAYOUT,
-        Constants$root.C_INT$LAYOUT
-    );
-    static final MethodHandle io_uring_prep_multishot_accept$MH = RuntimeHelper.downcallHandle(
-        "io_uring_prep_multishot_accept",
-        constants$13.io_uring_prep_multishot_accept$FUNC
+    static final MethodHandle kill$MH = RuntimeHelper.downcallHandle(
+        "kill",
+        constants$13.kill$FUNC
     );
 }
 

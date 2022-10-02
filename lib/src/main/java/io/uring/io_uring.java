@@ -23,9 +23,7 @@ public class io_uring {
             Constants$root.C_INT$LAYOUT.withName("sqe_tail"),
             Constants$root.C_LONG_LONG$LAYOUT.withName("ring_sz"),
             Constants$root.C_POINTER$LAYOUT.withName("ring_ptr"),
-            Constants$root.C_INT$LAYOUT.withName("ring_mask"),
-            Constants$root.C_INT$LAYOUT.withName("ring_entries"),
-            MemoryLayout.sequenceLayout(2, Constants$root.C_INT$LAYOUT).withName("pad")
+            MemoryLayout.sequenceLayout(4, Constants$root.C_INT$LAYOUT).withName("pad")
         ).withName("sq"),
         MemoryLayout.structLayout(
             Constants$root.C_POINTER$LAYOUT.withName("khead"),
@@ -37,9 +35,7 @@ public class io_uring {
             Constants$root.C_POINTER$LAYOUT.withName("cqes"),
             Constants$root.C_LONG_LONG$LAYOUT.withName("ring_sz"),
             Constants$root.C_POINTER$LAYOUT.withName("ring_ptr"),
-            Constants$root.C_INT$LAYOUT.withName("ring_mask"),
-            Constants$root.C_INT$LAYOUT.withName("ring_entries"),
-            MemoryLayout.sequenceLayout(2, Constants$root.C_INT$LAYOUT).withName("pad")
+            MemoryLayout.sequenceLayout(4, Constants$root.C_INT$LAYOUT).withName("pad")
         ).withName("cq"),
         Constants$root.C_INT$LAYOUT.withName("flags"),
         Constants$root.C_INT$LAYOUT.withName("ring_fd"),

@@ -1,0 +1,1 @@
+gcc -o liburing-inlines.so -shared -fPIC liburing-inlines.c -luring
